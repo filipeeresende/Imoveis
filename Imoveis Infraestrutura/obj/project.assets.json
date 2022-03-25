@@ -5251,19 +5251,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\Filipe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\Imoveis\\Imoveis Infraestrutura\\Imoveis Infraestrutura.csproj",
+      "projectUniqueName": "C:\\Users\\Filipe\\Documents\\projetos\\estudos\\Imoveis\\Imoveis Infraestrutura\\Imoveis Infraestrutura.csproj",
       "projectName": "Imoveis Infraestrutura",
-      "projectPath": "C:\\Users\\User\\source\\repos\\Imoveis\\Imoveis Infraestrutura\\Imoveis Infraestrutura.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\Imoveis\\Imoveis Infraestrutura\\obj\\",
+      "projectPath": "C:\\Users\\Filipe\\Documents\\projetos\\estudos\\Imoveis\\Imoveis Infraestrutura\\Imoveis Infraestrutura.csproj",
+      "packagesPath": "C:\\Users\\Filipe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Filipe\\Documents\\projetos\\estudos\\Imoveis\\Imoveis Infraestrutura\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Filipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5329,7 +5329,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

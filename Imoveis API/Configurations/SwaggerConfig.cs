@@ -89,7 +89,7 @@ namespace Imoveis_API.Configurations
                 Title = _configuration.GetValue<string>("Swagger:Title"),
                 Version = description.ApiVersion.ToString(),
                 Description = _configuration.GetValue<string>("Swagger:Description"),
-                Contact = new OpenApiContact { Email = "victor@cataldebessa.com.br", Name = "Suporte para dev's" }
+                Contact = new OpenApiContact { Email = "filipee.resende@gmail.com", Name = "developer" }
             };
 
             if (description.IsDeprecated)

@@ -5272,19 +5272,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\Filipe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\Imoveis\\Imoveis Dominio\\Imoveis Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\Filipe\\Documents\\projetos\\estudos\\Imoveis\\Imoveis Dominio\\Imoveis Dominio.csproj",
       "projectName": "Imoveis Dominio",
-      "projectPath": "C:\\Users\\User\\source\\repos\\Imoveis\\Imoveis Dominio\\Imoveis Dominio.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\Imoveis\\Imoveis Dominio\\obj\\",
+      "projectPath": "C:\\Users\\Filipe\\Documents\\projetos\\estudos\\Imoveis\\Imoveis Dominio\\Imoveis Dominio.csproj",
+      "packagesPath": "C:\\Users\\Filipe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Filipe\\Documents\\projetos\\estudos\\Imoveis\\Imoveis Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Filipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5298,8 +5298,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\Imoveis\\Imoveis Infraestrutura\\Imoveis Infraestrutura.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\Imoveis\\Imoveis Infraestrutura\\Imoveis Infraestrutura.csproj"
+            "C:\\Users\\Filipe\\Documents\\projetos\\estudos\\Imoveis\\Imoveis Infraestrutura\\Imoveis Infraestrutura.csproj": {
+              "projectPath": "C:\\Users\\Filipe\\Documents\\projetos\\estudos\\Imoveis\\Imoveis Infraestrutura\\Imoveis Infraestrutura.csproj"
             }
           }
         }
@@ -5342,7 +5342,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
