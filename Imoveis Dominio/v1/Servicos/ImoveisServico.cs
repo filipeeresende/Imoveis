@@ -28,33 +28,22 @@ namespace Imoveis_Dominio.v1.Servicos
             _configuration = configuration;
         }
 
-        public async Task<APIMessage> BuscarImoveisAPI()
+        public async Task<APIMessage> BuscarImoveisAPI(string cep)
         {
-            var json = new ChamadaAPIRequest
-            {
-                City = "Austin",
-                State = "TX"
-            };
-
             RestClient client = new RestClient(_configuration.GetValue<string>("endPoint:APIImoveis"));
-
-            RestRequest request = new RestRequest("saleListings");
-
-            request.AddParameter("application/json", JsonConvert.SerializeObject(json), ParameterType.RequestBody);
-
-            request.AddHeader("x-rapidapi-host", "realty-mole-property-api.p.rapidapi.com");
-            request.AddHeader("x-rapidapi-key", "SIGN-UP-FOR-KEY");
-
-            request.AddParameter("application/x-www-form-urlencoded;charset=UTF-8", ParameterType.HttpHeader);
+            RestRequest request = new RestRequest("{cep}/json").AddUrlSegment("cep", cep);
 
             var response = await client.GetAsync(request);
 
-            return new APIMessage(HttpStatusCode.OK, response);
+            if (response.Content.Contains("{\n  \"erro\": true\n}"))
+                return new APIMessage(HttpStatusCode.BadRequest, "Este cep não é valido.");
+
+            return new APIMessage(HttpStatusCode.OK, response.Content);
         }
 
         public async Task<APIMessage> BuscarImoveis()
         {
-             List<ImoveisResponse> imoveis = await _imoveisRepositorio.BuscarImoveis();
+            List<ImoveisResponse> imoveis = await _imoveisRepositorio.BuscarImoveis();
 
             if (!imoveis.Any())
             {

@@ -18,9 +18,15 @@ namespace Imoveis_API.v1.Controllers
         }
 
         [HttpGet("chamada-api")]
-        public async Task<IActionResult> BuscarImoveisAPI()
+        public async Task<IActionResult> BuscarImoveisAPI(string cep)
         {
-            APIMessage imoveis = await _imoveisServico.BuscarImoveisAPI();
+            if (cep.Length != 8)
+                return BadRequest("O CEP deve conter 8 caracteres.");
+
+            if (!cep.All(char.IsDigit))
+                return BadRequest("O CEP deve conter apenas números.");
+
+            APIMessage imoveis = await _imoveisServico.BuscarImoveisAPI(cep);
 
             return StatusCode((int)imoveis.StatusCode, imoveis.ContentObj);
         }

@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Imoveis_Dominio.v1.Interfaces
 {
-    public interface IImoveisServico 
+    public interface IImoveisServico
     {
         Task<APIMessage> BuscarImoveis();
-        Task<APIMessage> BuscarImoveisAPI();
+        Task<APIMessage> BuscarImoveisAPI(string cep);
         Task<APIMessage> BuscarImovelPorId(int id);
         Task<APIMessage> AdicionarImovel(ImoveisRequest request);
         Task<APIMessage> AtualizarImovel(ImoveisRequest request, int id);
