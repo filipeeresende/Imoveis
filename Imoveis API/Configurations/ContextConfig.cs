@@ -7,9 +7,10 @@ namespace Imoveis_API
     {
         public static void AddDatabaseContext(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<LOCADORA_IMOVEISContext>(options => options
-            .UseMySql(configuration.GetConnectionString("Imoveis"),
-            new MySqlServerVersion(new Version(8, 0, 28))));
+            //var configuracao = WebApplication.CreateBuilder();
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<LOCADORA_IMOVEISContext>((options) =>
+                             options.UseNpgsql(connectionString));
         }
     }
 }

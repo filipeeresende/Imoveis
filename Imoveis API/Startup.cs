@@ -25,17 +25,9 @@ namespace Imoveis_API
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseHsts();
-            }
-
+            app.UseDeveloperExceptionPage();
+            app.UseHsts();
             app.UseStaticFiles();
-
             app.UseWebApiConfiguration(MyAllowSpecificOrigins);
             app.UseSwaggerConfig(env, provider, "");
         }

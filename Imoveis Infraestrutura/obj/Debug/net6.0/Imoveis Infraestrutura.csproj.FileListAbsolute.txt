@@ -12,3 +12,17 @@ C:\Users\User\source\repos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\Imove
 C:\Users\User\source\repos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\ref\Imoveis Infraestrutura.dll
 C:\Users\User\source\repos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\Imoveis Infraestrutura.pdb
 C:\Users\User\source\repos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\Imoveis Infraestrutura.genruntimeconfig.cache
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\bin\Debug\net6.0\Imoveis Infraestrutura.deps.json
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\bin\Debug\net6.0\Imoveis Infraestrutura.runtimeconfig.json
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\bin\Debug\net6.0\Imoveis Infraestrutura.dll
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\bin\Debug\net6.0\Imoveis Infraestrutura.pdb
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\Imoveis Infraestrutura.csproj.AssemblyReference.cache
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\Imoveis Infraestrutura.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\Imoveis Infraestrutura.AssemblyInfoInputs.cache
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\Imoveis Infraestrutura.AssemblyInfo.cs
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\Imoveis Infraestrutura.csproj.CoreCompileInputs.cache
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\Imoveis Infraestrutura.dll
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\refint\Imoveis Infraestrutura.dll
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\Imoveis Infraestrutura.pdb
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\Imoveis Infraestrutura.genruntimeconfig.cache
+C:\Users\Filipe\Documents\projetos\estudos\Imoveis\Imoveis Infraestrutura\obj\Debug\net6.0\ref\Imoveis Infraestrutura.dll
