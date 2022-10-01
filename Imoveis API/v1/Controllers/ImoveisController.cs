@@ -17,10 +17,10 @@ namespace Imoveis_API.v1.Controllers
             _imoveisServico = imoveisServico;
         }
 
-        [HttpGet("chamada-api")]
-        public async Task<IActionResult> BuscarImoveisAPI()
+        [HttpGet("chamada-api/{cep}")]
+        public async Task<IActionResult> BuscarImoveisAPI(string cep)
         {
-            APIMessage imoveis = await _imoveisServico.BuscarImoveisAPI();
+            APIMessage imoveis = await _imoveisServico.BuscarImoveisAPI(cep);
 
             return StatusCode((int)imoveis.StatusCode, imoveis.ContentObj);
         }

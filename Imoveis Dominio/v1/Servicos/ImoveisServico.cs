@@ -28,26 +28,13 @@ namespace Imoveis_Dominio.v1.Servicos
             _configuration = configuration;
         }
 
-        public async Task<APIMessage> BuscarImoveisAPI()
+        public async Task<APIMessage> BuscarImoveisAPI(string cep)
         {
-            var json = new ChamadaAPIRequest
-            {
-                City = "Austin",
-                State = "TX"
-            };
-
             RestClient client = new RestClient(_configuration.GetValue<string>("endPoint:APIImoveis"));
 
-            RestRequest request = new RestRequest("saleListings");
+            var request = new RestRequest($"/ws/{cep}/json/", Method.Get);
 
-            request.AddParameter("application/json", JsonConvert.SerializeObject(json), ParameterType.RequestBody);
-
-            request.AddHeader("x-rapidapi-host", "realty-mole-property-api.p.rapidapi.com");
-            request.AddHeader("x-rapidapi-key", "SIGN-UP-FOR-KEY");
-
-            request.AddParameter("application/x-www-form-urlencoded;charset=UTF-8", ParameterType.HttpHeader);
-
-            var response = await client.GetAsync(request);
+            var response = client.GetAsync<ChamadaAPIRequest>(request);
 
             return new APIMessage(HttpStatusCode.OK, response);
         }

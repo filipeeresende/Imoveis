@@ -12,10 +12,10 @@ namespace Imoveis_Dominio.v1.Interfaces
     public interface IImoveisServico 
     {
         Task<APIMessage> BuscarImoveis();
-        Task<APIMessage> BuscarImoveisAPI();
         Task<APIMessage> BuscarImovelPorId(int id);
         Task<APIMessage> AdicionarImovel(ImoveisRequest request);
         Task<APIMessage> AtualizarImovel(ImoveisRequest request, int id);
         Task<APIMessage> RemoverImovel(int id);
+        Task<APIMessage> BuscarImoveisAPI(string cep);
     }
 }
