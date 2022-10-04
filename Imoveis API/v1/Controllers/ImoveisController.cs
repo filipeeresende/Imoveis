@@ -2,6 +2,7 @@
 using Imoveis_Dominio.v1.Dto_s.Imoveis;
 using Imoveis_Dominio.v1.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Imoveis_API.v1.Controllers
 {
@@ -17,6 +18,7 @@ namespace Imoveis_API.v1.Controllers
             _imoveisServico = imoveisServico;
         }
 
+        
         [HttpGet("chamada-api/{cep}")]
         public async Task<IActionResult> BuscarImoveisAPI(string cep)
         {
@@ -25,6 +27,7 @@ namespace Imoveis_API.v1.Controllers
             return StatusCode((int)imoveis.StatusCode, imoveis.ContentObj);
         }
 
+        [SwaggerOperation("Lista todos os imoveis no banco")]
         [HttpGet]
         public async Task<IActionResult> BuscarImoveis()
         {
@@ -33,6 +36,7 @@ namespace Imoveis_API.v1.Controllers
             return StatusCode((int)imoveis.StatusCode, imoveis.ContentObj);
         }
 
+        [SwaggerOperation("Lista imoveis no banco por id")]
         [HttpGet("{id}")]
         public async Task<IActionResult> BuscarImovelPorId(int id)
         {
@@ -41,6 +45,7 @@ namespace Imoveis_API.v1.Controllers
             return StatusCode((int)imovel.StatusCode, imovel.ContentObj);
         }
 
+        [SwaggerOperation("Adcionar imoveis no banco")]
         [HttpPost]
         public async Task<IActionResult> AdicionarImovel(ImoveisRequest request)
         {
@@ -49,6 +54,7 @@ namespace Imoveis_API.v1.Controllers
             return StatusCode((int)novoImovel.StatusCode, novoImovel.ContentObj);
         }
 
+        [SwaggerOperation("Atualizar imoveis cadastrados no banco por id")]
         [HttpPut("{id}")]
         public async Task<IActionResult> AtualizarImovel(int id, ImoveisRequest request)
         {
@@ -57,6 +63,7 @@ namespace Imoveis_API.v1.Controllers
             return StatusCode((int)atualizar.StatusCode, atualizar.ContentObj);
         }
 
+        [SwaggerOperation("Deletar imoveis no banco por id")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> RemoverImovel(int id)
         {
