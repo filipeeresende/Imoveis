@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,6 @@ namespace Imoveis_Dominio.v1.Dto_s.Imoveis
         public string gia { get; set; }
         public string ddd { get; set; }
         public string siafi { get; set; }
-
+        public string erro { internal get; set; } = "false";
     }
 }

@@ -18,11 +18,15 @@ namespace Imoveis_API.v1.Controllers
         {
             _imoveisServico = imoveisServico;
         }
-
-
-        [HttpGet("chamada-api/{cep}")]
+        [SwaggerOperation("Buscar informações do referente ao cep")]
+        [SwaggerResponse(StatusCodes.Status200OK, "", typeof(ChamadaAPIRequest))]
+        [SwaggerResponse(StatusCodes.Status404NotFound, "Cep não encontrado.", typeof(string))]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, "O valor deve conter apenas digitos e 8 caracteres.", typeof(string))]
+        [HttpGet("chamada-api")]
         public async Task<IActionResult> BuscarImoveisAPI(string cep)
         {
+            if (!cep.All(char.IsDigit) || cep.Length != 8) return BadRequest("O valor deve conter apenas digitos e 8 caracteres.");
+
             APIMessage imoveis = await _imoveisServico.BuscarImoveisAPI(cep);
 
             return StatusCode((int)imoveis.StatusCode, imoveis.ContentObj);

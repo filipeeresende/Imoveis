@@ -32,9 +32,11 @@ namespace Imoveis_Dominio.v1.Servicos
         {
             RestClient client = new RestClient(_configuration.GetValue<string>("endPoint:APIImoveis"));
 
-            var request = new RestRequest($"/ws/{cep}/json/", Method.Get);
+            RestRequest request = new RestRequest($"/ws/{cep}/json/", Method.Get);
 
-            var response = client.GetAsync<ChamadaAPIRequest>(request);
+            var response = await client.GetAsync<ChamadaAPIRequest>(request);
+
+            if (bool.Parse(response.erro)) return new APIMessage(HttpStatusCode.NotFound, "Cep não encontrado.");
 
             return new APIMessage(HttpStatusCode.OK, response);
         }
