@@ -18,6 +18,7 @@ namespace Imoveis_API.v1.Controllers
         {
             _imoveisServico = imoveisServico;
         }
+
         [SwaggerOperation("Buscar informações do referente ao cep")]
         [SwaggerResponse(StatusCodes.Status200OK, "", typeof(ChamadaAPIRequest))]
         [SwaggerResponse(StatusCodes.Status404NotFound, "Cep não encontrado.", typeof(string))]
