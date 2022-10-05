@@ -1,4 +1,5 @@
 ﻿using GerenciamentoComercio_Domain.Utils.APIMessage;
+using Imoveis_Dominio.v1.Dto_s;
 using Imoveis_Dominio.v1.Dto_s.Imoveis;
 using Imoveis_Dominio.v1.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -28,6 +29,8 @@ namespace Imoveis_API.v1.Controllers
         }
 
         [SwaggerOperation("Lista todos os imoveis no banco")]
+        [SwaggerResponse(StatusCodes.Status200OK, "", typeof(IList<ImoveisResponse>))]
+        [SwaggerResponse(StatusCodes.Status404NotFound, "Nenhum imóvel foi encontrado.", typeof(string))]
         [HttpGet]
         public async Task<IActionResult> BuscarImoveis()
         {
@@ -37,6 +40,8 @@ namespace Imoveis_API.v1.Controllers
         }
 
         [SwaggerOperation("Lista imoveis no banco por id")]
+        [SwaggerResponse(StatusCodes.Status200OK, "", typeof(ImovelPorIdResponse))]
+        [SwaggerResponse(StatusCodes.Status404NotFound, "Imovel não encontrado.", typeof(string))]
         [HttpGet("{id}")]
         public async Task<IActionResult> BuscarImovelPorId(int id)
         {
@@ -46,6 +51,8 @@ namespace Imoveis_API.v1.Controllers
         }
 
         [SwaggerOperation("Adcionar imoveis no banco")]
+        [SwaggerResponse(StatusCodes.Status200OK, "Imovel cadastrado com sucesso.", typeof(string))]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, "O valor deve ser maior que 0.", typeof(string))]
         [HttpPost]
         public async Task<IActionResult> AdicionarImovel(ImoveisRequest request)
         {
@@ -55,6 +62,8 @@ namespace Imoveis_API.v1.Controllers
         }
 
         [SwaggerOperation("Atualizar imoveis cadastrados no banco por id")]
+        [SwaggerResponse(StatusCodes.Status200OK, "Imovel atualizado com sucesso.", typeof(string))]
+        [SwaggerResponse(StatusCodes.Status404NotFound, "Imovel não encontrado.", typeof(string))]
         [HttpPut("{id}")]
         public async Task<IActionResult> AtualizarImovel(int id, ImoveisRequest request)
         {
@@ -64,6 +73,8 @@ namespace Imoveis_API.v1.Controllers
         }
 
         [SwaggerOperation("Deletar imoveis no banco por id")]
+        [SwaggerResponse(StatusCodes.Status200OK, "Imovel removido com sucesso.", typeof(string))]
+        [SwaggerResponse(StatusCodes.Status404NotFound, "Imovel não encontrado.", typeof(string))]
         [HttpDelete("{id}")]
         public async Task<IActionResult> RemoverImovel(int id)
         {
