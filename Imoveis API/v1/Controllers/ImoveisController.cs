@@ -19,7 +19,7 @@ namespace Imoveis_API.v1.Controllers
             _imoveisServico = imoveisServico;
         }
 
-        
+
         [HttpGet("chamada-api/{cep}")]
         public async Task<IActionResult> BuscarImoveisAPI(string cep)
         {
